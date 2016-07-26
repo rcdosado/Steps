@@ -29,12 +29,10 @@ Basic 64 Bit Project Workflow
 	library kernel32,'KERNEL32.DLL'
 
 	include 'api/kernel32.inc'
-
   ```
 
- 3. Create a batch file that automatically compiles your code
+3. Create a batch file that automatically compiles your code
 
- 
  ```bash
 
 	@echo off
