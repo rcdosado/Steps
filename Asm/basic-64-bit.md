@@ -41,4 +41,4 @@ Basic 64 Bit Project Workflow
 
  ```
 
-
+4. Now, whenever you modify your code just run this batch to compile.
