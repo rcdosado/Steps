@@ -15,6 +15,7 @@ Basic 64 Bit Project Workflow
 	section '.text' code readable executable
 
 	  Start:
+	  			;write any 32/64 bit code here
 				push  rbp
 				pop   rbp
 				invoke  ExitProcess,0
