@@ -26,7 +26,7 @@ Basic Django Project Workflow
   ```bash
   python manage.py migrate
   ```
-5. Run server
+5. Run server so you can test if everythings fine
 
   ```bash
   python manage.py runserver
@@ -61,7 +61,7 @@ Basic Django Project Workflow
   python manage.py makemigrations
   python manage.py migrate
   ```
-11. Run the server and configure django admin, go to your browser and go to http://localhost:8000
+11. Run the server and configure django admin, open your browser and go to http://localhost:8000
 
   ```bash
   python manage.py runserver
