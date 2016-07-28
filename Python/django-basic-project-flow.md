@@ -46,9 +46,22 @@ Basic Django Project Workflow
   #python manage.py sqlmigrate 0001
   python manage.py migrate
   ```
-8. Create your User Accounts
+8. Create User Accounts
 
   ```bash
   python manage.py createsuperuser
   python manage.py migrate
+  ```
+
+9. Create your models in models.py
+10. register site in admin.py
+11. makemigrations & migrate
+  ```bash
+  python manage.py makemigrations
+  python manage.py migrate
+  ```
+11. Run the server and configure django admin, go to your browser and go to http://localhost:8000
+
+  ```bash
+  python manage.py runserver
   ```
