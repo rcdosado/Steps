@@ -3,7 +3,7 @@ Basic 64 Bit Project Workflow
 
 1. Download Flat Assembly 64 at http://flatassembler.net/download.php
 
-2. Write template
+2. Write template, save as source.asm or whatever you like
 
   ```bash
 
@@ -15,9 +15,9 @@ Basic 64 Bit Project Workflow
 	section '.text' code readable executable
 
 	  Start:
-						   push  rbp
-						   pop   rbp
-						   invoke  ExitProcess,0
+				push  rbp
+				pop   rbp
+				invoke  ExitProcess,0
 
 
 	section '.data' data readable writeable
@@ -41,4 +41,4 @@ Basic 64 Bit Project Workflow
 
  ```
 
-4. Now, whenever you modify your code just run this batch to compile.
+4. Now, whenever you modify your code just run this batch to compile (assumes source code is named source.asm)
