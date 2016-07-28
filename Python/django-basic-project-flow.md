@@ -56,6 +56,7 @@ Basic Django Project Workflow
 9. Create your models in models.py
 10. register site in admin.py
 11. makemigrations & migrate
+
   ```bash
   python manage.py makemigrations
   python manage.py migrate
