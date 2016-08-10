@@ -12,7 +12,7 @@ Steps To Do X
 
 ### Python
 
-- [django start](python/django-basic-project-flow.md)
+- [django start](Python/django-basic-project-flow.md)
 
 
 ### Asm
