@@ -1,8 +1,5 @@
 #HTML 5 Template (normalized)
 
-Basic Django Project Workflow
---------------------------------
-
 1. Create folder name css, js, img, fonts to your working directory
 2. Copy your css, js, img, fonts accordingly to the folders 
 3. Create index.html, and paste the code below
