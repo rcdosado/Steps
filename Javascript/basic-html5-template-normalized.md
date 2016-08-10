@@ -21,4 +21,4 @@
 	</html>
   ```
  
-4. the code above is just an example, script and link, tags must be filled with valid links.
+4. Build upon the code, you may now add modules and stuff (the code above is just an example, script and link, tags must be filled with valid links)
