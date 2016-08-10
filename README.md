@@ -21,6 +21,8 @@ Steps To Do X
 ### Git
 
 ### Javascript
+- [Basic Template for HTML5 normalized](Javascript/basic-html5-template-normalized.md)
+
 
 ## About
 
