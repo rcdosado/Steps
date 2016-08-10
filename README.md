@@ -1,3 +1,35 @@
-# Steps
-This Repo is my reference whenever i forgot how to do something, it doesnt explain much, just the steps
-how to do it. it assume whenever i read the steps, i could recall the reasons for the how's and why's of the code
+# STEPS
+Steps To Do X
+
+###Categories
+
+* [Python](#python)
+* [Asm](#asm)
+* [Git](#git)
+* [JavaScript](#javascript)
+
+--
+
+### Python
+
+- [django start](python/django-basic-project-flow.md)
+
+
+### Asm
+- [Basic 64 bit PE file](Asm/basic-64-bit.md)
+
+### Git
+
+### Javascript
+
+## About
+
+inspired from TIL
+
+## License
+
+&copy; 2016-2017 RCD
+
+This repository is licensed under the MIT license. See `LICENSE` for
+details.
+
