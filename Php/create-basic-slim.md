@@ -23,6 +23,6 @@ Creating Basic Slim Project
 
 	```
 6. Copy the test code in slimframework.com, to index.php
-7. open terminal and go to public directory, execute `php -S localhost:8080`  
-   to execute local host server
+7. open terminal and go to public directory, execute `php -S localhost:8080` to execute local host server
 8. To Test if Slim is working go to the address bar of the browser type localhost:8080/hello/roy and enter
+
