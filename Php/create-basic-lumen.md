@@ -157,3 +157,101 @@ Creating Basic Lumen REST Project
 	$app->put('api/v1/book/{id}','App\Http\Controllers\BookController@updateBook');
 	$app->delete('api/v1/book/{id}','App\Http\Controllers\BookController@deleteBook');
    ```
+   you can make this compact by using group like the following:
+
+   ```php
+	$app->get('/', function() use ($app) {
+		return "Lumen RESTful API By CoderExample (https://coderexample.com)";
+	});
+	 
+	$app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], function($app)
+	{
+		$app->get('book','BookController@index');
+	  
+		$app->get('book/{id}','BookController@getbook');
+		  
+		$app->post('book','BookController@createBook');
+		  
+		$app->put('book/{id}','BookController@updateBook');
+		  
+		$app->delete('book/{id}','BookController@deleteBook');
+	});
+
+   ```
+
+18. create a controller
+
+   ```php
+
+	<?php
+	  
+	namespace App\Http\Controllers;
+	  
+	use App\Book;
+	use App\Http\Controllers\Controller;
+	use Illuminate\Http\Request;
+	  
+	  
+	class BookController extends Controller{
+	  
+	  
+		public function index(){
+	  
+			$Books  = Book::all();
+	  
+			return response()->json($Books);
+	  
+		}
+	  
+		public function getBook($id){
+	  
+			$Book  = Book::find($id);
+	  
+			return response()->json($Book);
+		}
+	  
+		public function createBook(Request $request){
+	  
+			$Book = Book::create($request->all());
+	  
+			return response()->json($Book);
+	  
+		}
+	  
+		public function deleteBook($id){
+			$Book  = Book::find($id);
+			$Book->delete();
+	 
+			return response()->json('deleted');
+		}
+	  
+		public function updateBook(Request $request,$id){
+			$Book  = Book::find($id);
+			$Book->title = $request->input('title');
+			$Book->author = $request->input('author');
+			$Book->isbn = $request->input('isbn');
+			$Book->save();
+	  
+			return response()->json($Book);
+		}
+	  
+	}
+   ```
+
+19. Test it, this is just one of many ways to test your API, you can also use POSTMAN chrome extension
+
+   ```bash
+
+	curl -I http://localhost:8000/api/v1/book
+	 
+	curl -v -H "Accept:application/json" http://localhost:8000/api/v1/book/2
+	 
+	curl -i -X POST -H &quot;Content-Type:application/json&quot; http://localhost:8000/api/v1/book -d '{&quot;title&quot;:&quot;Test Title&quot;,&quot;author&quot;:&quot;test author&quot;,&quot;isbn&quot;:&quot;12345&quot;}'
+	 
+	curl -v -H "Content-Type:application/json" -X PUT http://localhost:8000/api/v1/book -d '{"title":"Test updated title","author":"test upadted author","isbn":"1234567"}'
+	 
+	curl -i -X DELETE http://localhost:8000/api/v1/book/2
+
+   ```
+
+20. you can install plugins by simply using composer at the terminal.
