@@ -3,12 +3,12 @@
 
 
 Creating Basic Lumen REST Project
-=================================
+---------------------------------
 
-`condensed from https://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/`
+   `from https://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/`
 
 
-1. Install Wamp64 (preferably in root directory), this is optional, you can use `php -S localhost:9000` as webserver, but you must have MySQL installed and running
+1. Install Wamp64 or similar (preferably in root directory), this is optional, you can use `php -S localhost:9000` as webserver, but you must have MySQL installed and running
 2. Install Composer (make sure it is in the PATH)
 3. Create a folder from your WWW root, go there using terminal
 4. Install Lumen (you may use command below, assumes php.exe/composer is in the PATH)
@@ -262,4 +262,4 @@ Creating Basic Lumen REST Project
 20. you can install plugins by simply using composer at the terminal.
 
 
-The code and most instructions here are not mine, this is from a tutorial from https://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/ i just arranged it so its more direct. 
+   The code and most instructions here are not mine, this is from a tutorial from https://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/ i just arranged it so its more direct. 
