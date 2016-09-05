@@ -29,11 +29,13 @@ Creating Basic Lumen REST Project
   ```
 9. find .env.example, and renamed to .env, replace those values with yours
 10. Now open "lumen_rest_project/bootstrap/app.php" and uncomment the ff lines:
+
   ```
 	Dotenv::load(__DIR__.'/../');  
 	$app->withFacades();
 	$app->withEloquent();
   ```
+
 11. design your database using php artisan command like this
   ```
 	php artisan make:migration create_books_table -create=books
