@@ -134,12 +134,13 @@ Creating Basic Lumen REST Project
     Write some routes and corresponding Controller method in order to create RESTful API.
 
    ```bash
-	Method	Url					Controler@method	 
-	GET	http://localhost:8000/api/v1/book	BookController@index		All Books
-	GET	http://localhost:8000/api/v1/book{id}	BookController@getbook		Fetch Book By id
-	POST	http://localhost:8000/api/v1/book	BookController@createBook	Create a book record
-	PUT	http://localhost:8000/api/v1/book{id}	BookController@updateBook	Update Book By id
-	DELETE	http://localhost:8000/api/v1/book{id}	BookController@deleteBook	Delete Book By id
+	|Method	|Url					|Controler@method	        |
+        |-------|---------------------------------------|-------------------------------|------------------
+	|GET	|http://localhost:8000/api/v1/book	|BookController@index		|All Books
+	|GET	|http://localhost:8000/api/v1/book{id}	|BookController@getbook		|Fetch Book By id
+	|POST	|http://localhost:8000/api/v1/book	|BookController@createBook	|Create a book record
+	|PUT	|http://localhost:8000/api/v1/book{id}	|BookController@updateBook	|Update Book By id
+	|DELETE	|http://localhost:8000/api/v1/book{id}	|BookController@deleteBook	|Delete Book By id
    ```
 
    we have appended api/v1 (ie, version v1) in all routes. It's a good practice in order to create web services.
