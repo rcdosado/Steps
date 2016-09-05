@@ -42,7 +42,8 @@ Creating Basic Lumen REST Project
   ```
   the entity is books, so change it depending on your model, the command above will create a migration file under "database/migration". if you open the file, you'll find "CreateBooksTable" class has been created, this class has two method one is "up" where we'll write our table schema, another is "down", where we'll drop our table which will call at the time of rollback.
 
-12. Now edit this migration file like this:
+12. Now edit this migration file like this (this is just an example, change it accordingly)
+
 
   ```php
 	use Illuminate\Database\Schema\Blueprint;
@@ -80,3 +81,78 @@ Creating Basic Lumen REST Project
 	}
 
   ```
+13. You have to tell lumen to update the structure of the database by issuing:
+
+   ```bash
+	php artisan migrate
+   ```
+
+14. Now create a Book model under "app/Book.php" and use book table instance.
+   ```php
+
+	<?php namespace App;
+	  
+	use Illuminate\Database\Eloquent\Model;
+	  
+	class Book extends Model
+	{
+		 
+		 protected $fillable = ['title', 'author', 'isbn'];
+		 
+	}
+	?>
+
+   ```
+15. Also create a BookController.php under "app/Http/Controllers".
+
+   ```php
+	<?php
+	  
+	namespace App\Http\Controllers;
+	  
+	use App\Book;
+	use App\Http\Controllers\Controller;
+	use Illuminate\Http\Request;
+	  
+	  
+	class BookController extends Controller{
+	  
+	 .....
+	 .....
+	 
+	}
+	?>
+   ```
+
+16. open "app/Http/routes.php" , you'll find one routed already exists.
+
+
+   ```php
+	$app->get('/', function() use ($app) {
+	..
+   ```
+    Write some routes and corresponding Controller method in order to create RESTful API.
+
+   ```bash
+	Method	Url					Controler@method	 
+	GET	http://localhost:8000/api/v1/book	BookController@index		All Books
+	GET	http://localhost:8000/api/v1/book{id}	BookController@getbook		Fetch Book By id
+	POST	http://localhost:8000/api/v1/book	BookController@createBook	Create a book record
+	PUT	http://localhost:8000/api/v1/book{id}	BookController@updateBook	Update Book By id
+	DELETE	http://localhost:8000/api/v1/book{id}	BookController@deleteBook	Delete Book By id
+   ```
+
+   we have appended api/v1 (ie, version v1) in all routes. It's a good practice in order to create web services.
+
+17. write this in your routes.php
+
+   ```php
+	$app->get('/', function() use ($app) {
+		return "Lumen RESTful API By CoderExample (https://coderexample.com)";
+	});
+	$app->get('api/v1/book','App\Http\Controllers\BookController@index');
+	$app->get('api/v1/book/{id}','App\Http\Controllers\BookController@getbook');
+	$app->post('api/v1/book','App\Http\Controllers\BookController@createBook');
+	$app->put('api/v1/book/{id}','App\Http\Controllers\BookController@updateBook');
+	$app->delete('api/v1/book/{id}','App\Http\Controllers\BookController@deleteBook');
+   ```
